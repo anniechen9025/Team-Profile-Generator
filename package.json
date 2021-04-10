@@ -4,7 +4,8 @@
   "description": "application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const manager = require("./lib/Question")
 
 // TODO: Create an array of questions for user input
 const questions = [];
@@ -18,7 +19,9 @@ function writeToFile(context) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(data => {});
+    inquirer.prompt(manager).then(data => {
+        console.log(data);
+    });
 };
 // Function call to initialize app
 init();
