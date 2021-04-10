@@ -6,7 +6,6 @@ describe("Employee", () => {
         it("should return to an object containinga 'number' property whe called with the 'new' keyword", () => {
             const obj = new Employee();
 
-            // expect("string" in obj).toEqual(true);
             expect(typeof (obj)).toBe("object");
         });
 
@@ -25,29 +24,6 @@ describe("Employee", () => {
             expect(employee.id).toEqual("01");
             expect(employee.email).toEqual("anniechen9025@gmail.com");
         });
-
-        // it("should throw an error if provided no arguments", () => {
-
-        //     const em = () => new Employee();
-
-        //     const err = new Error("need to input something");
-
-        //     expect(em).toThrow(err);
-        // });
-
-        // it("should throw an error if not provided a name, id and email", () => {
-        //     const em1 = () => new Employee("Sarah", "", "anniechen9025@gmail.com");
-        //     const em2 = () => new Employee("", "012", "anniechen9025@gmail.com");
-        //     const em3 = () => new Employee("Sarah", "012", "")
-
-        //     const err1 = new Error("Expected parameter 'name' to be input");
-        //     const err2 = new Error("Expected parameter 'id' to be input");
-        //     const err3 = new Error("Expected parameter 'email' to be input");
-
-        //     expect(em1).toThrowError(err1);
-        //     expect(em2).toThrowError(err2);
-        //     expect(em3).toThrowError(err3);
-        // });
     });
 
     describe("getName", () => {

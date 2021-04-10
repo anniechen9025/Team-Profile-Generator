@@ -23,7 +23,7 @@ function writeToFile(context) {
 function prtManager() {
     inquirer.prompt(manager).then(data => {
         console.log(data);
-        
+
         switch(data.choice){
             case "Engineer":
                 prtEngineer();
@@ -79,5 +79,6 @@ function prtIntern() {
         }
     });
 };
+
 // Function call to initialize app
 prtManager();
