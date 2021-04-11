@@ -1,11 +1,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const manager = require("./lib/Question-manager");
-const engineer = require("./lib/Question-engineer");
-const intern = require("./lib/Question-intern");
+const manager = require("./lib/Question/Question-manager");
+const engineer = require("./lib/Question/Question-engineer");
+const intern = require("./lib/Question/Question-intern");
 
 // TODO: Create an array of questions for user input
-// const questions = [];
+const dataArray = [];
 
 // TODO: Create a function to write README file
 function writeToFile(context) {
@@ -19,10 +19,13 @@ function writeToFile(context) {
     });
 };
 
+// TODO: Create a function to change array into HTML format
+
 // TODO: Create a function to initialize app
 function prtManager() {
     inquirer.prompt(manager).then(data => {
         console.log(data);
+        dataArray.push(data);
 
         switch(data.choice){
             case "Engineer":
@@ -32,17 +35,20 @@ function prtManager() {
                 prtIntern();
                 break;
             case "done":
-                writeToFile();
+                // writeToFile();
+                console.log(dataArray);
                 break;
             default:
                 return;
         }
+
     });
 };
 
 function prtEngineer() {
     inquirer.prompt(engineer).then(data => {
         console.log(data);
+        dataArray.push(data);
 
         switch(data.choice){
             case "Engineer":
@@ -52,7 +58,8 @@ function prtEngineer() {
                 prtIntern();
                 break;
             case "done":
-                writeToFile();
+                // writeToFile();
+                console.log(dataArray);
                 break;
             default:
                 return;
@@ -63,6 +70,7 @@ function prtEngineer() {
 function prtIntern() {
     inquirer.prompt(intern).then(data => {
         console.log(data);
+        dataArray.push(data);
 
         switch(data.choice){
             case "Engineer":
@@ -72,7 +80,8 @@ function prtIntern() {
                 prtIntern();
                 break;
             case "done":
-                writeToFile();
+                // writeToFile();
+                console.log(dataArray);
                 break;
             default:
                 return;
