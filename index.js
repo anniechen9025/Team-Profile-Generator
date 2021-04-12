@@ -27,7 +27,6 @@ function writeToFile(context) {
 // TODO: Create a function to initialize app
 function prtManager() {
     inquirer.prompt(manager).then(data => {
-        // console.log(data);
         dataArray.push(data);
 
         switch (data.choice) {
@@ -38,7 +37,6 @@ function prtManager() {
                 prtIntern();
                 break;
             case "done":
-                // writeToFile();
                 console.log(dataArray);
                 filterHtmlMaking();
                 break;
@@ -51,7 +49,6 @@ function prtManager() {
 
 function prtEngineer() {
     inquirer.prompt(engineer).then(data => {
-        // console.log(data);
         dataArray.push(data);
 
         switch (data.choice) {
@@ -62,7 +59,6 @@ function prtEngineer() {
                 prtIntern();
                 break;
             case "done":
-                // writeToFile();
                 console.log(dataArray);
                 filterHtmlMaking();
                 break;
@@ -74,7 +70,6 @@ function prtEngineer() {
 
 function prtIntern() {
     inquirer.prompt(intern).then(data => {
-        // console.log(data);
         dataArray.push(data);
 
         switch (data.choice) {
@@ -132,6 +127,7 @@ function filterHtmlMaking() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project Team</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
     <div class = "container">
