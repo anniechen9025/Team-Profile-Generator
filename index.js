@@ -15,7 +15,7 @@ let htmlcards = "";
 // TODO: Create a function to write README file
 function writeToFile(context) {
     console.log(context);
-    fs.writeFile("index.html", context, error => {
+    fs.writeFile(__dirname + '/dist/index.html', context, error => {
         if (error) {
             console.log(error);
         } else {
