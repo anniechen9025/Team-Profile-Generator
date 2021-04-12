@@ -99,6 +99,7 @@ prtManager();
 
 // TODO: Create a function to change array into HTML format
 function filterHtmlMaking() {
+    //Filter Array
     managerArray = dataArray.filter(function (item) {
         return item.position === "Manager";
     });
@@ -108,12 +109,11 @@ function filterHtmlMaking() {
     internArray = dataArray.filter(function (item) {
         return item.position === "Intern";
     });
-    // console.log(managerArray);
 
+    //Map Array
     let mangerhtml = managerArray.map(function (item) {
         return generateMhtml(item);
     });
-    // console.log(mangerhtml);
     let engineerhtml = engineerArray.map(function (item) {
         return generateEhtml(item);
     })
@@ -122,7 +122,7 @@ function filterHtmlMaking() {
     })
 
     const htmlArray = mangerhtml.concat(engineerhtml, internhtml);
-    // console.log(htmlArray);
+
     htmlcards = htmlArray.join("");
     const html = `<!DOCTYPE html>
 <html lang="en">
