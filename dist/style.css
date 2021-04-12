@@ -1,0 +1,27 @@
+body{
+    background-color: #cfccc7;
+}
+
+#header-title{
+    background-color: #bcd0c4;
+}
+
+#card-head{
+    background-color: #a7b9a7;
+}
+
+h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 10vh;
+}
+
+h2{
+    color: #313d4b;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+h3{
+    color: #56686a;
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+}

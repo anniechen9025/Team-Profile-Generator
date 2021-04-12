@@ -124,19 +124,24 @@ function filterHtmlMaking() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project Team</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <div class = "container">
+    <div class = "container" id = "header-title">
         <div class = "row">
             <div class = "col-12 mb-3">
                 <h1 class = "text-center">My Project Team</h1>
             </div>
         </div>
     </div>
+</br>
     <div class = "container">
         <div class = "row">
-            <div class = "col-12 d-flex justify-content-center">
+            <div class = "col-12 d-flex justify-content-around">
                 ${htmlcards}
             </div>
         </div>
@@ -151,8 +156,8 @@ function filterHtmlMaking() {
 let generateMhtml = (managerArray) => {
     return `   
     <div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card title">${managerArray.name}</h2>
+    <div class="card-header" id = "card-head">
+        <h2 class="card-title">${managerArray.name}</h2>
         <h3 class="card-title">${managerArray.position}</h3>
     </div>
     <div class="card-body">
@@ -167,8 +172,8 @@ let generateMhtml = (managerArray) => {
 let generateEhtml = (engineerArray) => {
     return `   
     <div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card title">${engineerArray.name}</h2>
+    <div class="card-header" id = "card-head">
+        <h2 class="card-title">${engineerArray.name}</h2>
         <h3 class="card-title">${engineerArray.position}</h3>
     </div>
     <div class="card-body">
@@ -183,8 +188,8 @@ let generateEhtml = (engineerArray) => {
 let generateIhtml = (internArray) => {
     return `   
     <div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card title">${internArray.name}</h2>
+    <div class="card-header" id = "card-head">
+        <h2 class="card-title">${internArray.name}</h2>
         <h3 class="card-title">${internArray.position}</h3>
     </div>
     <div class="card-body">
