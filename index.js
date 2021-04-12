@@ -36,8 +36,7 @@ function prtManager() {
             case "Intern":
                 prtIntern();
                 break;
-            case "done":
-                console.log(dataArray);
+            case "Done":
                 filterHtmlMaking();
                 break;
             default:
@@ -58,8 +57,7 @@ function prtEngineer() {
             case "Intern":
                 prtIntern();
                 break;
-            case "done":
-                console.log(dataArray);
+            case "Done":
                 filterHtmlMaking();
                 break;
             default:
@@ -79,8 +77,7 @@ function prtIntern() {
             case "Intern":
                 prtIntern();
                 break;
-            case "done":
-                console.log(dataArray);
+            case "Done":
                 filterHtmlMaking();
                 break;
             default:
@@ -146,6 +143,7 @@ function filterHtmlMaking() {
     </div>
 </body>
 </html>`;
+
     writeToFile(html);
 };
 
@@ -193,7 +191,7 @@ let generateIhtml = (internArray) => {
         <ul class="list-group">
             <li class="list-group-item">ID: ${internArray.id}</li>
             <li class="list-group-item">Email: ${internArray.email}</li>
-            <li class="list-group-item">School: ${internArray.school}</li>
+            <li class="list-group-item">School Name: ${internArray.school}</li>
         </ul>
     </div>
 </div>`
