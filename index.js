@@ -164,7 +164,7 @@ let generateMhtml = (managerArray) => {
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${managerArray.id}</li>
-            <li class="list-group-item">Email: ${managerArray.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${managerArray.email}"> ${managerArray.email}</a></li>
             <li class="list-group-item">Office Number: ${managerArray.office}</li>
         </ul>
     </div>
@@ -181,7 +181,7 @@ let generateEhtml = (engineerArray) => {
         <ul class="list-group">
             <li class="list-group-item">ID: ${engineerArray.id}</li>
             <li class="list-group-item">Email: ${engineerArray.email}</li>
-            <li class="list-group-item">Github: ${engineerArray.github}</li>
+            <li class="list-group-item">Github: <a href="https://github.com/${engineerArray.github}">${engineerArray.github}</a></li>
         </ul>
     </div>
 </div>`
@@ -203,12 +203,4 @@ let generateIhtml = (internArray) => {
 </div>`
 };
 
-
-
-// let managerArray = [];
-// for(let i=0; i < dataArray.length; i++){
-//     if (dataArray.position === "Manager"){
-//         managerArray.push(dataArray[i]);
-//     }
-// };
 
