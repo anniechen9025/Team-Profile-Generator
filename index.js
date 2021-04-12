@@ -174,7 +174,7 @@ let generateEhtml = (engineerArray) => {
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${engineerArray.id}</li>
-            <li class="list-group-item">Email: ${engineerArray.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${engineerArray.email}">${engineerArray.email}</a></li>
             <li class="list-group-item">Github: <a href="https://github.com/${engineerArray.github}">${engineerArray.github}</a></li>
         </ul>
     </div>
@@ -190,7 +190,7 @@ let generateIhtml = (internArray) => {
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${internArray.id}</li>
-            <li class="list-group-item">Email: ${internArray.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${internArray.email}">${internArray.email}</a></li>
             <li class="list-group-item">School Name: ${internArray.school}</li>
         </ul>
     </div>
