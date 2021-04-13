@@ -127,6 +127,8 @@ function filterHtmlMaking() {
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
@@ -157,7 +159,7 @@ let generateMhtml = (managerArray) => {
     <div class="card employee-card">
     <div class="card-header" id = "card-head">
         <h2 class="card-title">${managerArray.name}</h2>
-        <h3 class="card-title">${managerArray.position}</h3>
+        <h3 class="card-title"><i class="fas fa-mug-hot"></i> ${managerArray.position}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -173,7 +175,7 @@ let generateEhtml = (engineerArray) => {
     <div class="card employee-card">
     <div class="card-header" id = "card-head">
         <h2 class="card-title">${engineerArray.name}</h2>
-        <h3 class="card-title">${engineerArray.position}</h3>
+        <h3 class="card-title"><i class="fas fa-glasses"> ${engineerArray.position}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -189,7 +191,7 @@ let generateIhtml = (internArray) => {
     <div class="card employee-card">
     <div class="card-header" id = "card-head">
         <h2 class="card-title">${internArray.name}</h2>
-        <h3 class="card-title">${internArray.position}</h3>
+        <h3 class="card-title"><i class="fas fa-user-graduate"></i> ${internArray.position}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
